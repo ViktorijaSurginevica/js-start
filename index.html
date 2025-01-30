@@ -33,30 +33,22 @@
       // else {
       //     alert ("Попрошу крутую скидку")
       // }
-
-      let sum = +prompt("Укажите первоначльную сумму", 1000);
-      const percent = 15;
-      const result = 2000;
-      let count = 0;
-
-      const depositTerm = +prompt("Укажите срок депозита", 10);
-
-      while (sum < depositTerm) {
-        sum = sum + sum * (percent / 100);
-        alert(sum);
-        count = count + 1;
-      }
-      console.log(sum, count);
-
-      //   while (sum < result) {
-      //     sum = sum + sum * (percent / 100);
-      //     alert(sum);
-      //     count = count + 1;
-      //   }
-      //   console.log(sum, count);
     </script>
   </head>
   <body>
     <div class="greeting">Hello, world!</div>
+
+    <script>
+      let sum = +prompt("Укажите первоначльную сумму", 1000);
+      const percent = 15;
+      const result = 2000;
+      let count = 0;
+      const depositTerm = +prompt("Укажите срок депозита", 10);
+      while (count < depositTerm) {
+        sum = sum + sum * (percent / 100);
+        count = count + 1;
+        document.write(count + ": " + sum + "<br>");
+      }
+    </script>
   </body>
 </html>
