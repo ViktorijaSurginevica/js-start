@@ -16,13 +16,23 @@
     friendAge = 29;
 
     const price = 100;
-    const discount = 10;
+    const discount = 12;
     const totalPrice = price - (price * discount/100);
-    console.log(totalPrice);
     
-    console.log(totalPrice>90);
-    console.log(totalPrice===90);
-    console.log(totalPrice<100);
+    // console.log(totalPrice);
+    // console.log(totalPrice>90);
+    // console.log(totalPrice===90);
+    // console.log(totalPrice<100);
+
+    if (totalPrice>=90) {
+        alert ("Слишком дорого!")
+    }
+    else if (totalPrice < 80) {
+        alert ("Берем целых два")
+    }
+    else {
+        alert ("Попрошу крутую скидку")
+    }
     
 
     </script>
