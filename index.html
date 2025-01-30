@@ -6,35 +6,45 @@
     <title>Document</title>
     <link rel="stylesheet" href="./index.css" />
     <script>
-    //   function greetings() {
-    //     alert("Hello, world!");
-    //   }
-    //   setTimeout(greetings, 5000);
-    const friendName = 'Alex';
-    // const friendName = 'Bob';
-    let friendAge = 28;
-    friendAge = 29;
+      //   function greetings() {
+      //     alert("Hello, world!");
+      //   }
+      //   setTimeout(greetings, 5000);
+      // const friendName = 'Alex';
+      // // const friendName = 'Bob';
+      // let friendAge = 28;
+      // friendAge = 29;
 
-    const price = 100;
-    const discount = 12;
-    const totalPrice = price - (price * discount/100);
-    
-    // console.log(totalPrice);
-    // console.log(totalPrice>90);
-    // console.log(totalPrice===90);
-    // console.log(totalPrice<100);
+      // const price = 100;
+      // const discount = 12;
+      // const totalPrice = price - (price * discount/100);
 
-    if (totalPrice>=90) {
-        alert ("Слишком дорого!")
-    }
-    else if (totalPrice < 80) {
-        alert ("Берем целых два")
-    }
-    else {
-        alert ("Попрошу крутую скидку")
-    }
-    
+      // console.log(totalPrice);
+      // console.log(totalPrice>90);
+      // console.log(totalPrice===90);
+      // console.log(totalPrice<100);
 
+      // if (totalPrice>=90) {
+      //     alert ("Слишком дорого!")
+      // }
+      // else if (totalPrice < 80) {
+      //     alert ("Берем целых два")
+      // }
+      // else {
+      //     alert ("Попрошу крутую скидку")
+      // }
+
+      let sum = 1000;
+      const percent = 15;
+      const result = 2000;
+      let count = 0;
+
+      while (sum < result) {
+        sum = sum + sum * (percent / 100);
+        alert(sum);
+        count = count + 1;
+      }
+      console.log(sum, count);
     </script>
   </head>
   <body>
