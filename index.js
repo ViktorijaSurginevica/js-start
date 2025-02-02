@@ -18,6 +18,8 @@ const location3 = 5;
 let isSunk = false;
 //предпологаемая позиция коробля ("выстрел)")
 let guess;
+// добавляем счетчик попаданий
+let hits = 0;
 
 while (isSunk === false) {
   // не забываем преврать строку в число
@@ -25,6 +27,12 @@ while (isSunk === false) {
   // логическое "или"
   if (guess === location1 || guess === location2 || guess === location3) {
     alert("HIT!");
+    // считаем попадания
+    hits = hits + 1;
+    // если подбили
+    if (hits === 3);
+    isSunk = true;
+    alert("You sank my battleship!");
   } else {
     alert("MISS!");
   }
