@@ -10,9 +10,10 @@
 // }
 
 //позиция коробля
-const location1 = 3;
-const location2 = 4;
-const location3 = 5;
+const randomLoc = 2; // от 0 и до 4
+const location1 = randomLoc;
+const location2 = location1 + 1;
+const location3 = location2 + 1;
 
 //потоплен или нет
 let isSunk = false;
