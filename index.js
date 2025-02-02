@@ -9,14 +9,23 @@
 //   document.write(count + ": " + sum + "<br>");
 // }
 
+//позиция коробля
 const location1 = 3;
 const location2 = 4;
 const location3 = 5;
 
+//потоплен или нет
 let isSunk = false;
+//предпологаемая позиция коробля ("выстрел)")
 let guess;
 
 while (isSunk === false) {
-  guess =  +prompt("Fire! Enter a number 0-6")
-  if(guess === location1 || guess === location2 || guess === location3)
+  // не забываем преврать строку в число
+  guess = +prompt("Fire! Enter a number 0-6");
+  // логическое "или"
+  if (guess === location1 || guess === location2 || guess === location3) {
+    alert("HIT!");
+  } else {
+    alert("MISS!");
+  }
 }
