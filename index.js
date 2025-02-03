@@ -47,6 +47,6 @@ while (isSunk === false) {
     }
   }
 }
-
-const stats = "You have " + hits + " hits out of " + guesses + " shots.";
+// доп данные
+1const stats = "You have " + hits + " hits out of " + guesses + " shots.";
 alert(stats);
