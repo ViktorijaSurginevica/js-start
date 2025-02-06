@@ -28,3 +28,4 @@ while (count < 4) {
 
   count++;
 }
+console.log(studentsNames);
