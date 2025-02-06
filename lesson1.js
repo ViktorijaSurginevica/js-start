@@ -18,3 +18,13 @@ while (energy >= MIN_ENERGY) {
 }
 
 console.log("Программа завершена. Робот отдыхает.");
+
+const studentsNames = ["Vika", "Alex", "Vlad", "Eugen"];
+
+let count = 0;
+
+while (count < 4) {
+  console.log(`${studentsNames[count]}, hi!`);
+
+  count++;
+}
