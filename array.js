@@ -1,5 +1,5 @@
 function getRandomElement(array) {
-  const randonIndex = Math.floor(Math.random() * words.length);
+  const randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
 }
 
