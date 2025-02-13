@@ -1,24 +1,25 @@
+function getRandomElement(array) {
+  const randonIndex = Math.floor(Math.random() * words.length);
+  return array[randomIndex];
+}
+
 function makePhrases() {
   const words1 = ["Кошка", "Мышка", "Собака"];
   const words2 = ["нюхала", "курила", "жевала"];
   const words3 = ["сыр", "морковка", "макароны"];
 
-  const randomIndex1 = Math.floor(Math.random() * words1.length);
-  const randomIndex2 = Math.floor(Math.random() * words2.length);
-  const randomIndex3 = Math.floor(Math.random() * words3.length);
-
   const phrase =
-    words1[randomIndex1] +
+    getRandomElement(words1) +
     " " +
-    words2[randomIndex2] +
+    getRandomElement(words2) +
     " " +
-    words3[randomIndex3];
+    getRandomElement(words3);
 
   return phrase;
 }
 const result = makePhrases();
 
 alert(result);
+// alert(makePhrases());
 
 console.log(result);
-
