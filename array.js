@@ -16,5 +16,9 @@ function makePhrases() {
 
   return phrase;
 }
+const result = makePhrases();
 
-makePhrases();
+alert(result);
+
+console.log(result);
+
