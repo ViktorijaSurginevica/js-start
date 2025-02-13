@@ -4,4 +4,4 @@ const noun = ["сыр", "морковка", "макароны"];
 
 let phrase = Math.floor(Math.random()*3;
 
-alert phrase;
+alert (phrase);
