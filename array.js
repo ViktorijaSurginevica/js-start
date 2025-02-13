@@ -14,7 +14,7 @@ function makePhrases() {
     " " +
     words3[randomIndex3];
 
-  alert(phrase);
+  return phrase;
 }
 
 makePhrases();
