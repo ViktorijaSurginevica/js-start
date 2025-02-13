@@ -1,7 +1,20 @@
-const animal = ["Кошка", "Мышка", "Собака"];
-const verb = ["нюхала", "курила", "жевала"];
-const noun = ["сыр", "морковка", "макароны"];
+function makePhrases() {
+  const words1 = ["Кошка", "Мышка", "Собака"];
+  const words2 = ["нюхала", "курила", "жевала"];
+  const words3 = ["сыр", "морковка", "макароны"];
 
-let phrase = Math.floor(Math.random()*3;
+  const randomIndex1 = Math.floor(Math.random() * words1.length);
+  const randomIndex2 = Math.floor(Math.random() * words2.length);
+  const randomIndex3 = Math.floor(Math.random() * words3.length);
 
-alert (phrase);
+  const phrase =
+    words1[randomIndex1] +
+    " " +
+    words2[randomIndex2] +
+    " " +
+    words3[randomIndex3];
+
+  alert(phrase);
+}
+
+makePhrases();
