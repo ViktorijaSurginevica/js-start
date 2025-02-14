@@ -1,22 +1,27 @@
-let gold = 100;
-const buildingName = "Tower";
-const buildingPrice = 30;
+// let gold = 100
+// let  = 'Tower'
+// let costGold = buildingName30
 
-if (gold >= buildingPrice) {
-  gold = gold - buildingPrice;
-  console.log(`$(buildingName): work complete`);
-} else {
-  console.log(`$(buildingName): need more gold!`);
+// if (gold >= costGold) {
+//     gold -= costGold // то же, что gold = gold - costGold
+//     console.log(`${buildingName}: work complete!`);
+// } else {
+//     console.log(`${buildingName}: not enough resources!`);
+// }
+
+// buildingName = "Garage";
+// costGold = 5;
+
+// if (gold >= costGold) {
+//     gold -= costGold // то же, что gold = gold - costGold
+//     console.log(`${buildingName}: work complete!`);
+// } else {
+//     console.log(`${buildingName}: not enough resources!`);
+// }
+
+// console.log("Gold rest: $(gold)");
+
+function createBuilding(buildingName, costGold) {
+    console.log(buildingName, costGold)
 }
 
-buildingName = "Garage";
-buildingPrice = 5;
-
-if (gold >= buildingPrice) {
-  gold = gold - buildingPrice;
-  console.log(`$(buildingName): work complete`);
-} else {
-  console.log(`$(buildingName): need more gold!`);
-}
-
-console.log("Gold rest: $(gold)");
