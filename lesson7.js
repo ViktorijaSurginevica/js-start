@@ -12,16 +12,15 @@
 // buildingName = "Garage";
 // costGold = 5;
 
-// if (gold >= costGold) {
-//     gold -= costGold // то же, что gold = gold - costGold
-//     console.log(`${buildingName}: work complete!`);
-// } else {
-//     console.log(`${buildingName}: not enough resources!`);
-// }
-
 // console.log("Gold rest: $(gold)");
 
 function createBuilding(buildingName, costGold) {
-    console.log(buildingName, costGold)
+  if (gold >= costGold) {
+    gold -= costGold; // то же, что gold = gold - costGold
+    console.log(`${buildingName}: work complete!`);
+  } else {
+    console.log(`${buildingName}: not enough resources!`);
+  }
 }
 
+createBuilding(buildingName, costGold);
