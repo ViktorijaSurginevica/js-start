@@ -36,3 +36,11 @@ function increaseResource(currentAmount, increment) {
 gold = increaseResource(gold, 50)
 console.log(`New amount of gold: ${gold}`)
 
+// Вызов функции без второго параметра
+gold = increaseResource(gold)
+console.log('New amount of gold: ' + gold) // New amount of gold: 80
+ 
+// Вызов функции с параметром
+gold = increaseResource(gold, 100)
+console.log('New amount of gold: ' + gold) // New amount of gold: 180
+
