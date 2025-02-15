@@ -44,3 +44,13 @@ console.log('New amount of gold: ' + gold) // New amount of gold: 80
 gold = increaseResource(gold, 100)
 console.log('New amount of gold: ' + gold) // New amount of gold: 180
 
+function increaseResource(currentAmount, increment = 10) {
+  // Создаем локальную переменную для нового количества ресурсов
+  const newAmount = currentAmount + increment;
+
+  return newAmount;
+}
+
+// Она недоступна за пределами функции
+console.log(newAmount) // ReferenceError: newAmount is not defined
+
