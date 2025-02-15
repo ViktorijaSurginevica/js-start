@@ -15,12 +15,20 @@
 // console.log("Gold rest: $(gold)");
 
 function createBuilding(buildingName, costGold) {
-  if (gold >= costGold) {
-    gold -= costGold; // то же, что gold = gold - costGold
-    console.log(`${buildingName}: work complete!`);
+  // Создаем переменную для проверки количества ресурса
+  const hasEnoughGold = gold >= costGold
+ 
+  if (hasEnoughGold) {
+      gold -= costGold
+      console.log(`${buildingName}: work complete!`)
   } else {
-    console.log(`${buildingName}: not enough resources!`);
+      console.log(`${buildingName}: not enough resources!`)
   }
 }
 
-createBuilding(buildingName, costGold);
+
+// Функция для увеличения ресурсов
+function increaseResource(currentAmount, increment) {
+  return currentAmount + increment
+}
+
