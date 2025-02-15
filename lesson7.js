@@ -32,3 +32,7 @@ function increaseResource(currentAmount, increment) {
   return currentAmount + increment
 }
 
+// Увеличение золота
+gold = increaseResource(gold, 50)
+console.log(`New amount of gold: ${gold}`)
+
