@@ -14,14 +14,13 @@ const scores = [
 let i = 0;
 let output;
 
-while (i < scores.length) {
-  output = "Bubble solution #" + i + " score: " + scores[i];
-  console.log(output);
+// while (i < scores.length) {
+//   output = "Bubble solution #" + i + " score: " + scores[i];
+//   console.log(output);
+//   i = i + 1;
+// }
 
-  i = i + 1;
-}
-
-for () {
+for (let i = 0; i < scores.length; i = i + 1;) {
     output = "Bubble solution #" + i + " score: " + scores[i];
     console.log(output);
 }
