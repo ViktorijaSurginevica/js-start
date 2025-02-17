@@ -20,9 +20,9 @@ let output;
 //   i = i + 1;
 // }
 
-for (let i = 0; i < scores.length; i = i + 1;) {
-    output = "Bubble solution #" + i + " score: " + scores[i];
-    console.log(output);
+for (let i = 0; i < scores.length; i++) {
+  output = "Bubble solution #" + i + " score: " + scores[i];
+  console.log(output);
 }
 
 console.log("Bubbles tests: " + scores.length);
