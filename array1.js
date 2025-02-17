@@ -33,15 +33,15 @@ console.log("Bubbles tests: " + scores.length);
 console.log(scores.length);
 console.log("Highest bubble score: " + highScore);
 
-const bestSolution = [];
+// const bestSolution = [];
 
-for (let i = 0; i < scores.length; i++) {
-  if (scores[i] === highScore) {
-    bestSolution.push(i);
-  }
-}
+// for (let i = 0; i < scores.length; i++) {
+//   if (scores[i] === highScore) {
+//     bestSolution.push(i);
+//   }
+// }
 
-console.log("Solutions with highest score:" + bestSolution);
+// console.log("Solutions with highest score:" + bestSolution);
 
 const highScore = printAddGetHighScore;
 
