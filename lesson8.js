@@ -5,3 +5,6 @@ console.log(scores.indexOf(12));
 
 console.log(scores.splice(4, 3));
 console.log(scores);
+
+console.log(scores.splice(4, 3, 555));
+console.log(scores);
