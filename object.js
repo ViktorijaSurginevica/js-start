@@ -5,6 +5,8 @@ const car = {
 }
 
 
-if () {
-    CaretPosition.
+if (car.mileage < 50000) {
+    alert('Buy it!')
+} else {
+    alert(Forget about it!)
 }
