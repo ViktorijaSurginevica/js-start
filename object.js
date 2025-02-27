@@ -9,3 +9,12 @@ if (car.mileage < 50000) {
 } else {
   alert("Forget about it!"); // Added quotes here
 }
+
+let payment = 50;
+
+let sallary = payment;
+
+payment = payment + 5;
+
+console.log(payment);
+console.log(sallary);
