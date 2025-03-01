@@ -30,5 +30,9 @@ const pet = {
     //метод объекта
     console.log("Meow!");
   },
+  checkstatus: function() {
+    console.log(`Счастье: ${pet.happiness}, Голод: ${pet.hunger}`)
+  }
 };
 pet.sayHi();
+pet.checkstatus()
