@@ -40,8 +40,16 @@ const pet = {
     }
     console.log("Питомец покормлен!");
   },
+  playWithPet: function () {
+    pet.happiness = pet.happiness + 10;
+    if (pet.happiness > 100) {
+      pet.happiness = 100;
+    }
+    console.log("Питомец счастлив!");
+  },
 };
 pet.sayHi();
 pet.checkstatus();
 pet.feedPet(30);
 pet.checkstatus();
+pet.playWithPet();
