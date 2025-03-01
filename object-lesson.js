@@ -53,3 +53,39 @@ pet.checkstatus();
 pet.feedPet(30);
 pet.checkstatus();
 pet.playWithPet();
+pet.checkstatus();
+
+const newPet = {
+  name: "Spike",
+  happiness: 80,
+  hunger: 30,
+  sayHi: function () {
+    //метод объекта
+    console.log("Meow!");
+  },
+  checkstatus: function () {
+    console.log(`Счастье: ${newPet.happiness}, Голод: ${newPet.hunger}`);
+  },
+  feedPet: function (foodQuantity) {
+    newPet.hunger = newPet.hunger - foodQuantity;
+    if (newPet.hunger < 0) {
+      newPet.hunger = 0;
+    }
+    console.log("Питомец покормлен!");
+  },
+  playWithPet: function () {
+    newPet.happiness = newPet.happiness + 10;
+    if (newPet.happiness > 100) {
+      newPet.happiness = 100;
+    }
+    console.log("Питомец счастлив!");
+  },
+};
+
+class Pet {
+  constructor(name, happiness, hunger) {
+    const this = {};
+  }
+}
+
+const nextPet = new Pet("Bobik", 100, 0);
