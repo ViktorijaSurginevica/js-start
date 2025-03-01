@@ -84,8 +84,40 @@ const newPet = {
 
 class Pet {
   constructor(name, happiness, hunger) {
-    const this = {};
+    //const this = {};
+    this.name = name;
+    this.happiness = happiness;
+    this.hunger = hunger;
+  }
+
+  sayHi() {
+    //метод объекта
+    console.log("Meow!");
+  }
+  checkstatus() {
+    console.log(`Счастье: ${this.happiness}, Голод: ${this.hunger}`);
+  }
+  feedPet(foodQuantity) {
+    this.hunger = this.hunger - foodQuantity;
+    if (this.hunger < 0) {
+      this.hunger = 0;
+    }
+    console.log("Питомец покормлен!");
+  }
+  playWithPet() {
+    this.happiness = this.happiness + 10;
+    if (this.happiness > 100) {
+      this.happiness = 100;
+    }
+    console.log("Питомец счастлив!");
   }
 }
 
 const nextPet = new Pet("Bobik", 100, 0);
+const vikaPet = new Pet("Shery", 100, 0);
+vikaPet.checkstatus();
+vikaPet.feedPet(80);
+vikaPet.checkstatus();
+// const beer = new Object();
+// const arr = new Array(1, 2, 3, 4, 5);
+// console.log(arr);
