@@ -21,10 +21,16 @@ console.log(Object.keys(cat));
 console.log(Object.values(cat));
 console.log(cat.hasOwnProperty('name'));
 
+
 // Дайте имя вашему виртуальному питомцу
-let name = 'Strider'
-// Состояние питомца
-let happiness = 50
-let hunger = 50
+const pet = {
+    name: 'Strider'
+    happiness: 50
+    hunger: 50
+    sayHi: function sayHi () {  метод объекта
+        console.log('Meow!')
+}
+}
+
 
 
