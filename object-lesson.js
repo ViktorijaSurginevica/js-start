@@ -30,9 +30,18 @@ const pet = {
     //метод объекта
     console.log("Meow!");
   },
-  checkstatus: function() {
-    console.log(`Счастье: ${pet.happiness}, Голод: ${pet.hunger}`)
-  }
+  checkstatus: function () {
+    console.log(`Счастье: ${pet.happiness}, Голод: ${pet.hunger}`);
+  },
+  feedPet: function (foodQuantity) {
+    pet.hunger = pet.hunger - foodQuantity;
+    if (pet.hunger < 0) {
+      pet.hunger = 0;
+    }
+    console.log("Питомец покормлен!");
+  },
 };
 pet.sayHi();
-pet.checkstatus()
+pet.checkstatus();
+pet.feedPet(30);
+pet.checkstatus();
