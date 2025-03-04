@@ -1,36 +1,24 @@
-// Необходимо реализовать метод removeResource в объекте game, который будет уменьшать количество ресурсов в зависимости от переданных параметров.
+// Задача:
+// Создайте объект car, который будет содержать следующие свойства:
 
+// brand (марка автомобиля)
+// model (модель автомобиля)
+// year (год выпуска)
+// mileage (пробег)
+// Также добавьте метод getCarInfo, который будет возвращать строку с полной информацией о автомобиле в формате:
 
+// "Марка: [brand], Модель: [model], Год: [year], Пробег: [mileage] км"
 
-// resource (строка) — тип ресурса (gold, lumber и т.д.).
-// amount (число) — количество ресурса, которое нужно убрать.
+let car = {
+  brand: "Toyota",
+  model: "Corolla",
+  year: 2020,
+  mileage: 15000,
 
+  getCarInfo: function () {
+    return `Марка: ${this.brand}, Модель: ${this.model}, Год: ${this.year}, Пробег: ${this.mileage} км`;
+  },
+};
 
-// Если ресурс существует, метод должен проверять, достаточно ли количества ресурса для уменьшения. 
-// Если количество ресурсов меньше, чем amount, выводить сообщение "Not enough resources", 
-// иначе уменьшать количество приростов на переданное значение amount и выводить сообщение с новым количеством.
-
-
-const game = {  
-    resources: {  
-      gold: 250,  
-      lumber: 100,  
-    },  
-    removeResource(resource, amount) {
-        if (this.resourses.hasOwnProperty(resource)) {
-            console.log();
-            
-        } else {
-            console.log("Not enough resources");
-            
-        }
-
-
-    }
-
-  };  
-  
-  // Примеры использования метода:  
-  // game.removeResource("gold", 50);   // New amount: 200  
-  // game.removeResource("lumber", 120); // Not enough resources  
-  // game.removeResource("stone", 10);   // Invalid resource  32
+// Вывод информации о автомобиле
+console.log(car.getCarInfo());
