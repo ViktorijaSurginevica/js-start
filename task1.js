@@ -9,16 +9,46 @@
 
 // "Марка: [brand], Модель: [model], Год: [year], Пробег: [mileage] км"
 
-let car = {
-  brand: "Toyota",
-  model: "Corolla",
-  year: 2020,
-  mileage: 15000,
+// let car = {
+//   brand: "Toyota",
+//   model: "Corolla",
+//   year: 2020,
+//   mileage: 15000,
 
-  getCarInfo: function () {
-    return `Марка: ${this.brand}, Модель: ${this.model}, Год: ${this.year}, Пробег: ${this.mileage} км`;
-  },
-};
+//   getCarInfo: function () {
+//     return `Марка: ${this.brand}, Модель: ${this.model}, Год: ${this.year}, Пробег: ${this.mileage} км`;
+//   },
+// };
 
 // Вывод информации о автомобиле
 console.log(car.getCarInfo());
+
+// Создайте объект student, который будет представлять студента и иметь следующие свойства:
+
+// name (имя студента)
+// age (возраст студента)
+// courses (массив с названиями курсов, которые изучает студент)
+// Добавьте метод addCourse, который будет принимать название курса в качестве аргумента и добавлять его в массив courses. Также добавьте метод getInfo, который будет возвращать строку с информацией о студенте в формате:
+
+// "Имя: [name], Возраст: [age], Курсы: [courses]"
+
+const student = {  
+    name: "Алексей",  
+    age: 20,  
+    courses: [],  
+
+    addCourse: function(course) {  
+        this.courses.push(course);  
+    },  
+
+    getInfo: function() {  
+        return `Имя: ${this.name}, Возраст: ${this.age}, Курсы: ${this.courses.join(", ")}`;  
+    }  
+};  
+
+// Добавляем курсы  
+student.addCourse("Математика");  
+student.addCourse("Программирование");  
+
+// Вывод информации о студенте  
+console.log(student.getInfo());  
