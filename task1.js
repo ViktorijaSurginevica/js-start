@@ -52,3 +52,40 @@ student.addCourse("Программирование");
 
 // Вывод информации о студенте  
 console.log(student.getInfo());  
+
+
+
+const library = {  
+    name: "City Library",  
+    books: [],  
+
+    addBook(title, author) {  
+        const newBook = {  
+            title: title,  
+            author: author,  
+            isAvailable: true,  
+        };  
+        this.books.push(newBook);  
+    },  
+
+    removeBook(title) {  
+        this.books = this.books.filter(book => book.title !== title);  
+    },  
+
+    listAvailableBooks() {  
+        return this.books.filter(book => book.isAvailable);  
+    },  
+
+    listAllBooks() {  
+        this.books.forEach(book => {  
+            console.log(`${book.title} by ${book.author} - ${book.isAvailable ? "Available" : "Not Available"}`);  
+        });  
+    }  
+};  
+
+// Пример использования:  
+library.addBook("1984", "George Orwell");  
+library.addBook("To Kill a Mockingbird", "Harper Lee");  
+library.listAllBooks();  
+library.removeBook("1984");  
+library.listAllBooks();  
