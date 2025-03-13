@@ -24,15 +24,15 @@ const data = {
     this.render();
   },
 
-  updateLessonStatus(lessonId){
-   const lesson = this.course.lessons.find(l => l.id === lessonId)
-   lesson.isDone = !lesson.isDone
-   this.render()
-  }
+  updateLessonStatus(lessonId) {
+    const lesson = this.course.lessons.find((l) => l.id === lessonId);
+    lesson.isDone = !lesson.isDone;
+    this.render();
+  },
 
-  updateLessonTitle(lessonId, newTitle){
-    const lesson = this.course.lessons.find(l => l.id === lessonId)
-    lesson.title = newTitle
-    this.render()
-  }
+  updateLessonTitle(lessonId, newTitle) {
+    const lesson = this.course.lessons.find((l) => l.id === lessonId);
+    lesson.title = newTitle;
+    this.render();
+  },
 };
