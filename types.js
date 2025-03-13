@@ -10,9 +10,17 @@ const data = {
     ],
   },
 
-render() {
-    console.log("Основы Fron-end разработки");
-    
-}
+  render() {
+    console.log(data.course);
+  },
 
-};
+  deleteLesson(lessonId) {
+this.course.lessons = this.course.lessons.filter(1 => 1.id !== lessonId)
+this.render()
+  }
+  addLesson(){
+    const newLesson = {}
+    this.course.lessons.push(newLesson)
+    this.render()
+  }
+}; 
