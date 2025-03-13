@@ -19,7 +19,7 @@ this.course.lessons = this.course.lessons.filter(1 => 1.id !== lessonId)
 this.render()
   }
   addLesson(){
-    const newLesson = {}
+    const newLesson = {id: 1, title: "Enter JS" , isDone: false}
     this.course.lessons.push(newLesson)
     this.render()
   }
