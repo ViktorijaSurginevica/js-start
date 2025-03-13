@@ -15,12 +15,12 @@ const data = {
   },
 
   deleteLesson(lessonId) {
-this.course.lessons = this.course.lessons.filter(1 => 1.id !== lessonId)
-this.render()
-  }
-  addLesson(){
-    const newLesson = {id: 1, title: "Enter JS" , isDone: false}
-    this.course.lessons.push(newLesson)
-    this.render()
-  }
-}; 
+    this.course.lessons = this.course.lessons.filter((l) => l.id !== lessonId);
+    this.render();
+  },
+  addLesson(lessonTitle) {
+    const newLesson = { id: 4, title: "Enter JS", isDone: false };
+    this.course.lessons.push(newLesson);
+    this.render();
+  },
+};
