@@ -91,12 +91,36 @@
 // library.listAllBooks();  
 
 
-function countSheeps(sheep) {
-  
-for (let i = 0; i < array.length; i++) {  
-     
+function countSheeps(sheep) {  
+    // Инициализируем счетчик присутствующих овец  
+    let count = 0;  
+
+    // Проверяем, является ли sheep массивом  
+    if (Array.isArray(sheep)) {  
+        // Проходим по каждому элементу массива  
+        for (let i = 0; i < sheep.length; i++) {  
+            // Проверяем, является ли текущий элемент true  
+            if (sheep[i] === true) {  
+                count++;  // Увеличиваем счетчик, если элемент true  
+            }  
+            // Дополнительно можно обрабатывать недопустимые значения, например:  
+            // if (sheep[i] === null || sheep[i] === undefined) {  
+            //     console.log(`Элемент на индексе ${i} недопустим`);  
+            // }  
+        }  
+    }  
+
+    return count;  // Возвращаем общее количество присутствующих овец  
 }  
 
+// Пример использования:  
+const sheepArray = [  
+    true,  true,  true,  false,  
+    true,  true,  true,  true,  
+    true,  false, true,  false,  
+    true,  false, false, true,  
+    true,  true,  true,  true,  
+    false, false, true,  true  
+];  
 
-
-  }
+console.log(countSheeps(sheepArray)); // Вывод: 17  
