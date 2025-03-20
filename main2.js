@@ -94,5 +94,15 @@ function Lesson(lesson) {
     rootElement.ELEMENT_NODE.classList.add("done");
   }
   rootElement.textContent = lesson.title;
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "x";
+  rootElement.append(deleteBtn);
   return rootElement;
+}
+
+function AddForm() {
+    const rootElement = document.createElement('form')
+    const inputElement = document.createElement('input')
+    const addBtn = document.createElement('button')
+    addBtn.textContent
 }
