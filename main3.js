@@ -119,6 +119,12 @@ function AddForm() {
   const inputElement = document.createElement("input");
   const addBtn = document.createElement("button");
   addBtn.textContent = "+";
+
+  rootElement.addEventListener("submit", function () {
+    data.addLesson(inputElement.value);
+    inputElement.value = "";
+  });
+
   rootElement.append(inputElement, addBtn);
   return rootElement;
 }
