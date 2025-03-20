@@ -79,10 +79,7 @@ function LessonsList(lessons) {
   const rootElement = document.createElement("ol");
   rootElement.classList.add("list");
   for (let i = 0; i < lessons.length; i++) {
-    const lessonElement = document.createElement("li");
-    lessonElement.classList.add("item");
-    lessonElement.textContent = lessons[i].title;
-    rootElement.append(lessonElement);
+    rootElement.append(Lesson(lesson[i]));
   }
   return rootElement;
 }
@@ -101,8 +98,8 @@ function Lesson(lesson) {
 }
 
 function AddForm() {
-    const rootElement = document.createElement('form')
-    const inputElement = document.createElement('input')
-    const addBtn = document.createElement('button')
-    addBtn.textContent
+  const rootElement = document.createElement("form");
+  const inputElement = document.createElement("input");
+  const addBtn = document.createElement("button");
+  addBtn.textContent;
 }
