@@ -90,5 +90,9 @@ function LessonsList(lessons) {
 function Lesson(lesson) {
   const rootElement = document.createElement("li");
   rootElement.classList.add("item");
+  if (lesson.isDone === true) {
+    rootElement.ELEMENT_NODE.classList.add("done");
+  }
   rootElement.textContent = lesson.title;
+  return rootElement;
 }
