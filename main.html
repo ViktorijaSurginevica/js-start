@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <style>
+    .list {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 10px;
+    }
+
+    .item {
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+    }
+
+    .done {
+      font-weight: 600; /* Делает текст более жирным, подчеркивая статус "пройдено" */
+    }
+
+    .done::before {
+      content: "✅"; /* Добавляет знак галочки после текста элемента */
+      font-size: 13px;
+      margin-left: 5px;
+    }
+  </style>
   <body>
     <script src="./main3.js"></script>
   </body>
