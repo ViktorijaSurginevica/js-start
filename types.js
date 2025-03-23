@@ -25,7 +25,7 @@ const data = {
   },
 
   updateLessonStatus(lessonId) {
-    const lesson = this.course.lessons.find((l) => l.id === lessonId);
+    const lesson = this.course.lessons.find((l) => l.id ===dotIndex !== -1 ? filename.slice(dotIndex + 1) : ""  lessonId);
     lesson.isDone = !lesson.isDone;
     this.render();
   },
@@ -38,3 +38,8 @@ const data = {
 };
 
 data.render();
+
+function CourseUI (course) {
+  const courseElement = document.createElement("div")
+  courseElement.classList.add("course")
+}
