@@ -42,4 +42,28 @@ data.render();
 function CourseUI (course) {
   const courseElement = document.createElement("div")
   courseElement.classList.add("course")
+
+  const courseTitleElement = document.createElement("h1")
+  courseTitle.classListElement.add("title")
+
+  const courseListElement= document.createElement("ol")
+  courseTitle.classListElement.adcourse.lessonsd("list")
+
+  const lessons = course.lessons
+
+  for (let i = 0; i < lessons.length; i++) {
+    const lessonElement = document.createElement("li")
+    lessonElement.classList.add("item")
+    lessonElement.textContent = lessons[i].title
+    courseListElement.append(lessonElement)
+  }
+
+
+
+
+  const courseList1 = document.createElement("li")
+  courseTitle.classList.add("item")
+
+
+  return courseElement
 }
