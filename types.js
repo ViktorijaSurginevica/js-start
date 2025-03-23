@@ -9,11 +9,7 @@ const data = {
     title: "Основы Fron-end разработки",
     lessons: [
       { id: crypto.randomUUID(), title: "Введение в JavaScript", isDone: true },
-      {
-        id: crypto.randomUUID(),
-        title: "Операторы, сравнение, ветвление",
-        isDone: false,
-      },
+      {id: crypto.randomUUID(), title: "Операторы, сравнение, ветвление", isDone: false,},
       { id: crypto.randomUUID(), title: "Функции", isDone: false },
     ],
   },
@@ -63,6 +59,7 @@ function CourseUI(course) {
   const courseElement = document.createElement("div");
   courseElement.classList.add("course");
 
+
   const courseTitleElement = document.createElement("h1");
   courseTitleElement.classList.add("title");
   courseTitleElement.textContent = course.title;
@@ -78,6 +75,9 @@ function CourseUI(course) {
     lessonElement.textContent = lessons[i].title;
     courseListElement.append(lessonElement);
   }
+
+  courseElement.append(courseTitleElement)
+  courseElement.append(courseListElement)
 
   return courseElement;
 }
