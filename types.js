@@ -36,3 +36,5 @@ const data = {
     this.render();
   },
 };
+
+data.render();
