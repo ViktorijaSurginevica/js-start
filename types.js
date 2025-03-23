@@ -1,35 +1,46 @@
 //CRUD
+//C
+//R
+//U
+//D
 
 const data = {
   course: {
     title: "Основы Fron-end разработки",
     lessons: [
-      { id: 1, title: "Введение в JavaScript", isDone: true },
-      { id: 2, title: "Операторы, сравнение, ветвление", isDone: false },
-      { id: 3, title: "Функции", isDone: false },
+      { id: crypto.randomUUID(), title: "Введение в JavaScript", isDone: true },
+      {
+        id: crypto.randomUUID(),
+        title: "Операторы, сравнение, ветвление",
+        isDone: false,
+      },
+      { id: crypto.randomUUID(), title: "Функции", isDone: false },
     ],
   },
-
   render() {
-    console.log(data.course);
+    // console.log(this.course);
+    document.body.innerHTML = "";
+    const courseUI = CourseUI(this.course);
+    document.body.append(courseUI);
   },
-
   deleteLesson(lessonId) {
     this.course.lessons = this.course.lessons.filter((l) => l.id !== lessonId);
     this.render();
   },
   addLesson(lessonTitle) {
-    const newLesson = { id: 4, title: "Enter JS", isDone: false };
+    const newLesson = {
+      id: crypto.randomUUID(),
+      title: lessonTitle,
+      isDone: false,
+    };
     this.course.lessons.push(newLesson);
     this.render();
   },
-
   updateLessonStatus(lessonId) {
-    const lesson = this.course.lessons.find((l) => l.id ===dotIndex !== -1 ? filename.slice(dotIndex + 1) : ""  lessonId);
+    const lesson = this.course.lessons.find((l) => l.id === lessonId);
     lesson.isDone = !lesson.isDone;
     this.render();
   },
-
   updateLessonTitle(lessonId, newTitle) {
     const lesson = this.course.lessons.find((l) => l.id === lessonId);
     lesson.title = newTitle;
@@ -39,31 +50,34 @@ const data = {
 
 data.render();
 
-function CourseUI (course) {
-  const courseElement = document.createElement("div")
-  courseElement.classList.add("course")
+// {
+//     title: "Основы Fron-end разработки",
+//     lessosns: [
+//         {id: crypto.randomUUID(), title: "Введение в JavaScript" , isDone: true},
+//         {id: crypto.randomUUID(), title: "Операторы, сравнение, ветвление", isDone: false},
+//         {id: crypto.randomUUID(), title: "Функции", isDone: false },
+//     ]
+// }
 
-  const courseTitleElement = document.createElement("h1")
-  courseTitle.classListElement.add("title")
+function CourseUI(course) {
+  const courseElement = document.createElement("div");
+  courseElement.classList.add("course");
 
-  const courseListElement= document.createElement("ol")
-  courseTitle.classListElement.adcourse.lessonsd("list")
+  const courseTitleElement = document.createElement("h1");
+  courseTitleElement.classList.add("title");
+  courseTitleElement.textContent = course.title;
 
-  const lessons = course.lessons
+  const courseListElement = document.createElement("ol");
+  courseListElement.classList.add("list");
+
+  const lessons = course.lessons;
 
   for (let i = 0; i < lessons.length; i++) {
-    const lessonElement = document.createElement("li")
-    lessonElement.classList.add("item")
-    lessonElement.textContent = lessons[i].title
-    courseListElement.append(lessonElement)
+    const lessonElement = document.createElement("li");
+    lessonElement.classList.add("item");
+    lessonElement.textContent = lessons[i].title;
+    courseListElement.append(lessonElement);
   }
 
-
-
-
-  const courseList1 = document.createElement("li")
-  courseTitle.classList.add("item")
-
-
-  return courseElement
+  return courseElement;
 }
