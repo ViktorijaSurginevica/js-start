@@ -36,11 +36,25 @@ const favoriteBooks = [
   },
 ];
 
-function printBookAuthors(books) {
+// function printBookAuthors(books) {
+//   for (let i = 0; i < books.length; i++) {
+//     const book = books[i];
+//     console.log(book.author);
+//   }
+// }
+
+// const printBookAuthors = function(books) {
+//     for (let i = 0; i < books.length; i++) {
+//       const book = books[i]
+//       console.log(book.author)
+//     }
+//   }
+
+const printBookAuthors = (books) => {
   for (let i = 0; i < books.length; i++) {
     const book = books[i];
     console.log(book.author);
   }
-}
+};
 
 printBookAuthors(favoriteBooks);
