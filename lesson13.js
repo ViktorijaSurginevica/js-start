@@ -64,9 +64,11 @@ printBookAuthors(favoriteBooks);
 
 const printCheapBooks = (books) => {
   for (let i = 0; i < books.length; i++) {
-    const price = books[i];
+    const book = books[i];
 
-    console.log(price.books);
+    if (book.price < 30) {
+      console.log(`${book.title} - ${book.price}`);
+    }
   }
 };
 
