@@ -50,26 +50,23 @@ const favoriteBooks = [
 //     }
 //   }
 
-const printBookAuthors = (books) => {
-  for (let i = 0; i < books.length; i++) {
-    const book = books[i];
-    console.log(book.author);
-  }
-};
-
-printBookAuthors(favoriteBooks);
-
-// Теперь напишем функцию, которая принимает массив книг и выводит в консоль цену
-// и названия дешёвых книг (стоимостью меньше 30). Будем использовать синтаксис стрелочных функций:
-
-const printCheapBooks = (books) => {
+const processBooks = (books, callback) => {
   for (let i = 0; i < books.length; i++) {
     const book = books[i];
 
-    if (book.price < 30) {
-      console.log(`${book.title} - ${book.price}`);
-    }
+    callback(book);
   }
 };
 
-printCheapBooks(favoriteBooks);
+const logAuthor = (book) => {
+  console.log(book.author);
+};
+
+const logCheapBooks = (book) => {
+  if (book.price < 30) {
+    console.log(`${book.title} - ${book.price}`);
+  }
+};
+
+processBooks(favoriteBooks, logAuthor);
+processBooks(favoriteBooks, logCheapBooks);
