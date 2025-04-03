@@ -58,3 +58,16 @@ const printBookAuthors = (books) => {
 };
 
 printBookAuthors(favoriteBooks);
+
+// Теперь напишем функцию, которая принимает массив книг и выводит в консоль цену
+// и названия дешёвых книг (стоимостью меньше 30). Будем использовать синтаксис стрелочных функций:
+
+const printCheapBooks = (books) => {
+  for (let i = 0; i < books.length; i++) {
+    const price = books[i];
+
+    console.log(price.books);
+  }
+};
+
+printCheapBooks(favoriteBooks);
